@@ -4761,6 +4761,21 @@ void cmd_reboot_fastboot(const char *arg, void *data, unsigned sz)
 	return;
 }
 
+void cmd_reboot_recovery(const char *arg, void *data, unsigned sz)
+{
+	dprintf(INFO, "rebooting the device - recovery\n");
+	if (send_recovery_cmd(RECOVERY_BOOT_RECOVERY_CMD)) {
+		dprintf(CRITICAL, "ERROR: Failed to update recovery commands\n");
+		fastboot_fail("Failed to update recovery command");
+		return;
+	}
+	fastboot_okay("");
+	reboot_device(REBOOT_MODE_UNKNOWN);
+
+	//shouldn't come here.
+	dprintf(CRITICAL, "ERROR: Failed to reboot device\n");
+	return;
+}
 
 #ifdef VIRTUAL_AB_OTA
 void CmdUpdateSnapshot(const char *arg, void *data, unsigned sz)
@@ -4813,15 +4828,6 @@ void cmd_reboot_bootloader(const char *arg, void *data, unsigned sz)
 	fastboot_okay("");
 	reboot_device(FASTBOOT_MODE);
 }
-
-void cmd_oem_reboot_recovery(const char *arg, void *data, unsigned sz)
-{
-	dprintf(INFO, "rebooting the device\n");
-	fastboot_okay("");
-	reboot_device(RECOVERY_MODE);
-}
-
-
 
 #if !ABOOT_STANDALONE
 void cmd_oem_enable_charger_screen(const char *arg, void *data, unsigned size)
@@ -5341,7 +5347,6 @@ void aboot_fastboot_register_commands(void)
 						{"continue", cmd_continue},
 						{"reboot", cmd_reboot},
 						{"reboot-bootloader", cmd_reboot_bootloader},
-						{"reboot-recovery", cmd_oem_reboot_recovery},
 #if !ABOOT_STANDALONE
 						{"oem unlock", cmd_oem_unlock},
 						{"oem unlock-go", cmd_oem_unlock_go},
@@ -5376,22 +5381,6 @@ void aboot_fastboot_register_commands(void)
 		fastboot_register(cmd_list[i].name,cmd_list[i].cb);
 
 #ifndef DISABLE_FASTBOOT_CMDS
-
-void cmd_reboot_recovery(const char *arg, void *data, unsigned sz)
-{
-	dprintf(INFO, "rebooting the device - recovery\n");
-	if (send_recovery_cmd(RECOVERY_BOOT_RECOVERY_CMD)) {
-		dprintf(CRITICAL, "ERROR: Failed to update recovery commands\n");
-		fastboot_fail("Failed to update recovery command");
-		return;
-	}
-	fastboot_okay("");
-	reboot_device(REBOOT_MODE_UNKNOWN);
-
-	//shouldn't come here.
-	dprintf(CRITICAL, "ERROR: Failed to reboot device\n");
-	return;
-}
 	if (partition_multislot_is_supported())
 		fastboot_register("set_active", cmd_set_active);
 #endif
@@ -5604,10 +5593,10 @@ void aboot_init(const struct app_descriptor *app)
 	}
 	if (!boot_into_fastboot)
 	{
-		if (keys_get_state(KEY_POWER) && keys_get_state(KEY_VOLUMEUP))
+		if (keys_get_state(KEY_VOLUMEUP))
 			boot_into_recovery = 1;
 		if (!boot_into_recovery &&
-			(keys_get_state(KEY_POWER) && keys_get_state(KEY_VOLUMEDOWN)))
+			(keys_get_state(KEY_HOME) || keys_get_state(KEY_BACK) || keys_get_state(KEY_VOLUMEDOWN)))
 			boot_into_fastboot = true;
 	}
 	#if NO_KEYPAD_DRIVER
