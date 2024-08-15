@@ -75,6 +75,7 @@
 - Huawei Honor 7C (aum-l41) (quirky - see comment in `lk2nd/device/dts/msm8952/msm8937-huawei-aum.dts`)
 - Leeco s2
 - Motorola Moto G5 (cedric) (quirky - see comment in `lk2nd/device/dts/msm8952/msm8937-motorola-cedric.dts`)
+- OPPO A57 (A57) (quirky - see comment in `lk2nd/device/dts/msm8952/msm8940-oppo-a57.dts`)
 - Redmi Note 3 Pro (kenzo)
 - Sony Xperia X
 - Sony Xperia X Compact
@@ -91,6 +92,7 @@
 - Motorola Moto G5 Plus (potter)
 - Motorola Moto G7 Power (ocean)
 - Motorola One (deen)
+- OPPO R9s/R9sk (R9s/R9sk) (quirky - see comments in `lk2nd/device/dts/msm8953/msm8953-oppo-r9s.dts`)
 - Samsung Galaxy A6+
 - Samsung Galaxy J8 LTE
 - Samsung Tab A2 XL WIFI
@@ -121,6 +123,7 @@
 - HTC One Mini 2 - memul (quirky - see comment in `lk2nd/device/dts/msm8226/msm8926-htc-memul.dts`)
 - Huawei Ascend G6 4G - G6-L11 (quirky - see comment in `lk2nd/device/dts/msm8226/msm8926-huawei-g6-l11-vb.dts`)
 - Huawei Watch - sturgeon
+- LG Fx0 - madai
 - LG G Watch R - lenok <!--(use `lk2nd-appended-dtb.img`)-->
 - Motorola Moto G 2013 - falcon
 - Motorola Moto G 4G 2013 - peregrine
