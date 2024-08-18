@@ -496,7 +496,7 @@ void display_fastboot_menu_renew(struct select_msg_info *fastboot_msg_info)
 
 	memset(msg_buf, 0, sizeof(msg_buf));
 	get_bootloader_version((unsigned char *) msg_buf);
-	snprintf(msg, sizeof(msg), "BOOTLOADER VERSION - %s\n",
+	snprintf(msg, sizeof(msg), "BOOTLOADER VERSION - lk1st-msm8992-lumia950-v1%s\n",
 		msg_buf);
 	display_fbcon_menu_message(msg, FBCON_COMMON_MSG, common_factor, 0);
 
