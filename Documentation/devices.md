@@ -9,7 +9,7 @@
 - Asus Zenfone 2 Laser (1080p) - Z00T
 - Asus Zenfone 2 Laser ZE500KL - Z00E
 - Asus Zenfone Max ZC550KL (2016) - Z010D
-- BQ Aquaris M5 - piccolo <!--(use `lk2nd-msm8916-appended-dtb.img`)-->
+- BQ Aquaris M5 - piccolo (quirky - see comment in `lk2nd/device/dts/msm8916/msm8939-qrd-skuk.dts`)
 - BQ Aquaris X5 - paella, picmt
 - DragonBoard 410c - apq8016-sbc
 - GPLUS FL8005A
@@ -38,7 +38,7 @@
 - Samsung Galaxy E5 - SM-E500F
 - Samsung Galaxy E7 - SM-E7000
 - Samsung Galaxy Grand Max - SM-G720AX
-- Samsung Galaxy Grand Prime - SM-G530FZ, SM-G530H, SM-G530W, SM-G530Y (G530Y is quirky - see comment in `lk2nd/device/dts/msm8916/msm8916-samsung.dts`)
+- Samsung Galaxy Grand Prime - SM-G530FZ, SM-G530H, SM-G530R4, SM-G530W, SM-G530Y (G530Y is quirky - see comment in `lk2nd/device/dts/msm8916/msm8916-samsung.dts`)
 - Samsung Galaxy J3 (2016) - SM-J3109, SM-J320YZ
 - Samsung Galaxy J3 Pro - SM-J3110, SM-J3119
 - Samsung Galaxy J5 (2015) - SM-J5007, SM-J5008, SM-J500F, SM-J500FN, SM-J500H, SM-J500M
@@ -75,6 +75,7 @@
 - Huawei Honor 7C (aum-l41) (quirky - see comment in `lk2nd/device/dts/msm8952/msm8937-huawei-aum.dts`)
 - Leeco s2
 - Motorola Moto G5 (cedric) (quirky - see comment in `lk2nd/device/dts/msm8952/msm8937-motorola-cedric.dts`)
+- OPPO A57 (A57) (quirky - see comment in `lk2nd/device/dts/msm8952/msm8940-oppo-a57.dts`)
 - Redmi Note 3 Pro (kenzo)
 - Sony Xperia X
 - Sony Xperia X Compact
@@ -91,12 +92,14 @@
 - Motorola Moto G5 Plus (potter)
 - Motorola Moto G7 Power (ocean)
 - Motorola One (deen)
+- OPPO R9s/R9sk (R9s/R9sk) (quirky - see comments in `lk2nd/device/dts/msm8953/msm8953-oppo-r9s.dts`)
 - Samsung Galaxy A6+
 - Samsung Galaxy J8 LTE
 - Samsung Tab A2 XL WIFI
 - Xiaomi Mi A1 (tissot)
 - Xiaomi Mi A2 Lite (daisy)
 - Xiaomi Redmi 4 Prime (markw)
+- Xiaomi Redmi 5 (rosy)
 - Xiaomi Redmi 5 Plus (vince)
 - Xiaomi Redmi 6 Pro (sakura)
 - Xiaomi Redmi 7 (onclite)
@@ -121,6 +124,7 @@
 - HTC One Mini 2 - memul (quirky - see comment in `lk2nd/device/dts/msm8226/msm8926-htc-memul.dts`)
 - Huawei Ascend G6 4G - G6-L11 (quirky - see comment in `lk2nd/device/dts/msm8226/msm8926-huawei-g6-l11-vb.dts`)
 - Huawei Watch - sturgeon
+- LG Fx0 - madai
 - LG G Watch R - lenok <!--(use `lk2nd-appended-dtb.img`)-->
 - Motorola Moto G 2013 - falcon
 - Motorola Moto G 4G 2013 - peregrine

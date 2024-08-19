@@ -246,9 +246,6 @@
 		panel {
 			compatible = "samsung,gprime-panel", "lk2nd,panel";
 
-			qcom,mdss_dsi_hx8389c_qhd_video {
-				compatible = "samsung,hx8389c-gh9607501a";
-			};
 			ss_dsi_panel_HX8389C_GH9607501A_QHD {
 				compatible = "samsung,hx8389c-gh9607501a";
 			};
@@ -278,9 +275,6 @@
 		panel {
 			compatible = "samsung,gprime-panel", "lk2nd,panel";
 
-			qcom,mdss_dsi_hx8389c_qhd_video {
-				compatible = "samsung,hx8389c-gh9607501a";
-			};
 			ss_dsi_panel_HX8389C_GH9607501A_QHD {
 				compatible = "samsung,hx8389c-gh9607501a";
 			};
@@ -314,6 +308,35 @@
 	};
 
 	/* rev 3 */
+
+	gprimelteusc {
+		model = "Samsung Galaxy Grand Prime (SM-G530R4)";
+		compatible = "samsung,gprimelteusc";
+		lk2nd,match-bootloader = "G530R4*";
+
+		lk2nd,dtb-files = "msm8916-samsung-gprimelteusc";
+
+		qcom,msm-id = <QCOM_ID_MSM8916 0>;
+		qcom,board-id = <0xCE08FF01 3>;
+
+		muic-reset {
+			compatible = "samsung,muic-reset";
+			i2c-reg = <0x14>;
+			i2c-sda-gpios = <&tlmm 2 I2C_GPIO_FLAGS>;
+			i2c-scl-gpios = <&tlmm 3 I2C_GPIO_FLAGS>;
+		};
+
+		panel {
+			compatible = "samsung,gprime-panel", "lk2nd,panel";
+
+			ss_dsi_panel_HX8389C_GH9607501A_QHD {
+				compatible = "samsung,hx8389c-gh9607501a";
+			};
+			ss_dsi_panel_S6D78A0_GH9607501A_QHD {
+				compatible = "samsung,s6d78a0-gh9607501a";
+			};
+		};
+	};
 
 	serranovelte {
 		model = "Samsung Galaxy S4 Mini Value Edition";
@@ -542,7 +565,7 @@
 	e5ltexx {
 		model = "Samsung Galaxy E5 (SM-E500F)";
 		compatible = "samsung,e5ltexx", "samsung,e5";
-		lk2nd,match-bootloader = "A500FU*";
+		lk2nd,match-bootloader = "E500F*";
 
 		lk2nd,dtb-files = "msm8916-samsung-e5";
 
@@ -717,7 +740,7 @@
 	/* rev 8 */
 
 	a5lte {
-		model = "Samsung Galaxy A5U (SM-A500F)";
+		model = "Samsung Galaxy A5 (SM-A500F)";
 		compatible = "samsung,a5lte", "samsung,a5u-eur", "samsung,a5";
 		lk2nd,match-bootloader = "A500F*";
 
@@ -773,7 +796,7 @@
 	/* rev 11 */
 
 	a5ltechn {
-		model = "Samsung Galaxy A5U (SM-A5000)";
+		model = "Samsung Galaxy A5 (SM-A5000)";
 		compatible = "samsung,a5ltechn", "samsung,a5u-eur", "samsung,a5";
 		lk2nd,match-bootloader = "A5000*";
 
@@ -784,7 +807,7 @@
 	};
 
 	a5ltezt {
-		model = "Samsung Galaxy A5U (SM-A500YZ)";
+		model = "Samsung Galaxy A5 (SM-A500YZ)";
 		compatible = "samsung,a5ltezt", "samsung,a5u-eur", "samsung,a5";
 		lk2nd,match-bootloader = "A500YZ*";
 
@@ -825,20 +848,6 @@
 			i2c-reg = <0x25>;
 			i2c-sda-gpios = <&tlmm 2 I2C_GPIO_FLAGS>;
 			i2c-scl-gpios = <&tlmm 3 I2C_GPIO_FLAGS>;
-		};
-
-		panel {
-			compatible = "samsung,gprime-panel", "lk2nd,panel";
-
-			qcom,mdss_dsi_hx8389c_qhd_video {
-				compatible = "samsung,hx8389c-gh9607501a";
-			};
-			ss_dsi_panel_HX8389C_GH9607501A_QHD {
-				compatible = "samsung,hx8389c-gh9607501a";
-			};
-			ss_dsi_panel_S6D78A0_GH9607501A_QHD {
-				compatible = "samsung,s6d78a0-gh9607501a";
-			};
 		};
 	};
 };
