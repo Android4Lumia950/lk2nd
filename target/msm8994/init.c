@@ -261,9 +261,9 @@ static void set_sdc_power_ctrl(uint8_t slot)
 	}
 	else if (slot == 0x2)
 	{
-		clk = TLMM_CUR_VAL_16MA;
-		cmd = TLMM_CUR_VAL_10MA;
-		dat = TLMM_CUR_VAL_10MA;
+		clk = TLMM_CUR_VAL_10MA;
+		cmd = TLMM_CUR_VAL_8MA;
+		dat = TLMM_CUR_VAL_8MA;
 		reg = SDC2_HDRV_PULL_CTL;
 	}
 	else
@@ -315,24 +315,25 @@ void target_sdc_init(void)
 
 	/* Set drive strength & pull ctrl values */
 	set_sdc_power_ctrl(config.slot);
+	if (!(dev = mmc_init(&config)))
+	{
+		dprintf(CRITICAL, "mmc init failed!");
+		ASSERT(0);
+	}
+	/* Try slot 2 */
+	config.slot = 2;
+	config.max_clk_rate = MMC_CLK_200MHZ;
+	config.sdhc_base = mmc_sdhci_base[config.slot - 1];
+	config.pwrctl_base = mmc_pwrctl_base[config.slot - 1];
+	config.pwr_irq     = mmc_sdc_pwrctl_irq[config.slot - 1];
+
+	/* Set drive strength & pull ctrl values */
+	set_sdc_power_ctrl(config.slot);
 
 	if (!(dev = mmc_init(&config)))
 	{
-		/* Try slot 2 */
-		config.slot = 2;
-		config.max_clk_rate = MMC_CLK_200MHZ;
-		config.sdhc_base = mmc_sdhci_base[config.slot - 1];
-		config.pwrctl_base = mmc_pwrctl_base[config.slot - 1];
-		config.pwr_irq     = mmc_sdc_pwrctl_irq[config.slot - 1];
-
-		/* Set drive strength & pull ctrl values */
-		set_sdc_power_ctrl(config.slot);
-
-		if (!(dev = mmc_init(&config)))
-		{
-			dprintf(CRITICAL, "mmc init failed!");
-			ASSERT(0);
-		}
+		dprintf(CRITICAL, "mmc init failed!");
+		ASSERT(0);
 	}
 }
 
