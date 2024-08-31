@@ -9,7 +9,7 @@ echo "1) Lumia 950(msm8992)"
 echo "2) Lumia 950 XL(msm8994)"
 read -p "Enter the number of your choice: " choice
 if [ "$choice" -eq 1 ]; then
-    make ARCH=arm TOOLCHAIN_PREFIX=arm-none-eabi- lk1st-msm8992 DEBUG=1 LK2ND_VERSION=lk2nd-msm8992-lumia-$head_rev-$head_date LK2ND_BUNDLE_DTB=msm8992-msft-talkman.dtb
+    make ARCH=arm TOOLCHAIN_PREFIX=arm-none-eabi- lk1st-msm8992 DEBUG=0 LK2ND_VERSION=lk2nd-msm8992-lumia-$head_rev-$head_date LK2ND_BUNDLE_DTB=msm8992-msft-talkman.dtb
 sudo dd if=/dev/zero of=build-lk1st-msm8992/lk.img bs=1 count=1M
 sudo mkfs.vfat build-lk1st-msm8992/lk.img
 mkdir build-lk1st-msm8992/m
