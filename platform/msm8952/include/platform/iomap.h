@@ -60,6 +60,16 @@
 #define APCS_ALIAS0_IPC_INTERRUPT_2        (APPS_SS_BASE + 0x00111008)
 #define APCS_ALIAS0_IPC_INTERRUPT          platform_get_apcs_ipc_base()
 
+/* LITTLE CLUSTER CORES 1-4 */
+#define APCS_C0_GLB_BASE                   (APPS_SS_BASE + 0x111000)
+#define APCS_C0_CMD_RCGR                   (APCS_C0_GLB_BASE + 0x50)
+#define APCS_C0_CFG_RCGR                   (APCS_C0_GLB_BASE + 0x54)
+#define APCS_C0_PLL_BASE                   (APPS_SS_BASE + 0x116000)
+/* BIG CLUSTER CORES 4-8 */
+#define APCS_C1_GLB_BASE                   (APPS_SS_BASE + 0x011000)
+#define APCS_C1_CMD_RCGR                   (APCS_C1_GLB_BASE + 0x50)
+#define APCS_C1_CFG_RCGR                   (APCS_C1_GLB_BASE + 0x54)
+
 #define PERIPH_SS_BASE                     0x07800000
 
 #define MSM_SDC1_BASE                      (PERIPH_SS_BASE + 0x00024000)
@@ -133,6 +143,7 @@
 #define SDCC_HC_PWRCTL_CLEAR_REG           (0x000000E4)
 #define SDCC_HC_PWRCTL_CTL_REG             (0x000000E8)
 
+#define SDC2_HDRV_PULL_CTL                 (TLMM_BASE_ADDR + 0x109000)
 #define SDCC2_BCR                          (CLK_CTL_BASE + 0x43000) /* block reset */
 #define SDCC2_APPS_CBCR                    (CLK_CTL_BASE + 0x43018) /* branch control */
 #define SDCC2_AHB_CBCR                     (CLK_CTL_BASE + 0x4301C)
