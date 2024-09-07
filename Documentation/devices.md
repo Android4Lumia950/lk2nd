@@ -79,9 +79,12 @@
 - Motorola Moto G6 Play (jeter)
 - OPPO A57 (A57) (quirky - see comment in `lk2nd/device/dts/msm8952/msm8940-oppo-a57.dts`)
 - Redmi 3S (land) (quirky - see comment in `lk2nd/device/dts/msm8952/msm8937-xiaomi-land.dts`)
+- Redmi 4A (rolex)
 - Redmi 4X (santoni)
 - Redmi 5A (riva)
 - Redmi Note 3 Pro (kenzo)
+- Redmi Note 5A (ugglite)
+- Redmi Note 5A Prime (ugg)
 - Sony Xperia X
 - Sony Xperia X Compact
 - Wileyfox Swift 2
@@ -95,6 +98,7 @@
 - Lenovo ThinkSmart View (cd-18781y) (quirky - see comments in `lk2nd/device/dts/msm8953/apq8053-lenovo-cd-18781y.dts`)
 - Meizu M6 Note (m1721)
 - Motorola Moto G5 Plus (potter)
+- Motorola Moto G6 (ali)
 - Motorola Moto G7 Power (ocean)
 - Motorola One (deen)
 - OPPO R9s/R9sk (R9s/R9sk) (quirky - see comments in `lk2nd/device/dts/msm8953/msm8953-oppo-r9s.dts`)
