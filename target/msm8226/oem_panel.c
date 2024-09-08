@@ -52,6 +52,7 @@
 #include "include/panel_jdi_1080p_video.h"
 #include "include/panel_nt35590_qvga_cmd.h"
 #include "include/panel_auo_qvga_cmd.h"
+#include "include/panel_tara_wvga_cmd.h"
 
 #define DISPLAY_MAX_PANEL_DETECTION 2
 
@@ -72,6 +73,7 @@ SSD2080M_720P_VIDEO_PANEL,
 JDI_1080P_VIDEO_PANEL,
 NT35590_QVGA_CMD_PANEL,
 AUO_QVGA_CMD_PANEL,
+TARA_WVGA_CMD_PANEL,
 UNKNOWN_PANEL
 };
 
@@ -90,6 +92,7 @@ static struct panel_list supp_panels[] = {
 	{"jdi_1080p_video", JDI_1080P_VIDEO_PANEL},
 	{"nt35590_qvga_cmd", NT35590_QVGA_CMD_PANEL},
 	{"auo_qvga_cmd", AUO_QVGA_CMD_PANEL},
+	{"tara_wvga_cmd", TARA_WVGA_CMD_PANEL},
 };
 
 static uint32_t panel_id;
@@ -366,6 +369,25 @@ static int init_panel_data(struct panel_struct *panelstruct,
 		memcpy(phy_db->timing,
 				auo_qvga_cmd_timings, TIMING_SIZE);
 		break;
+	case TARA_WVGA_CMD_PANEL:
+	panelstruct->paneldata    = &tara_wvga_cmd_panel_data;
+	panelstruct->panelres     = &tara_wvga_cmd_panel_res;
+	panelstruct->color        = &tara_wvga_cmd_color;
+	panelstruct->videopanel   = &tara_wvga_cmd_video_panel;
+	panelstruct->commandpanel = &tara_wvga_cmd_command_panel;
+	panelstruct->state        = &tara_wvga_cmd_state;
+	panelstruct->laneconfig   = &tara_wvga_cmd_lane_config;
+	panelstruct->paneltiminginfo    = &tara_wvga_cmd_timing_info;
+	panelstruct->panelresetseq    = &tara_wvga_cmd_reset_seq;
+	panelstruct->backlightinfo    = &tara_wvga_cmd_backlight;
+	
+	pinfo->mipi.panel_on_cmds     = tara_wvga_cmd_on_command;
+	pinfo->mipi.num_of_panel_on_cmds    = TARA_WVGA_CMD_ON_COMMAND;
+	pinfo->mipi.panel_off_cmds    = tara_wvga_cmd_off_command;
+	pinfo->mipi.num_of_panel_off_cmds     = TARA_WVGA_CMD_OFF_COMMAND;
+        		memcpy(phy_db->timing,
+				tara_wvga_cmd_timings, TIMING_SIZE);
+	break;
         case UNKNOWN_PANEL:
                 memset(panelstruct, 0, sizeof(struct panel_struct));
                 memset(pinfo->mipi.panel_on_cmds, 0,
