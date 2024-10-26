@@ -14,3 +14,5 @@
 	model = "Microsoft Lumia 950";
 	compatible = "microsoft,talkman";
 };
+
+#include "msft/msm8992-mtp-talkman-display.dtsi"
