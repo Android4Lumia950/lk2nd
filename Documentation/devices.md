@@ -64,6 +64,7 @@
 - Acer Liquid Z330 (T01)
 - CAT B35
 - FarEasTone Smart 506 (quirky - see comment in `lk2nd/device/dts/msm8909/msm8909-1gb-qrd-skuc.dts`)
+- Lenovo Yoga Tab 3 10 LTE
 - Mobvoi TicWatch Pro (WF12096)
 - Nokia 6300 4G
 - Nokia 8000 4G
@@ -121,7 +122,7 @@
 - Fairphone 2 - FP2
 - HTC One M8 - m8
 - LG G3 - D855
-- LG Google Nexus 5 - hammerhead D820, D821
+- LG Google Nexus 5 - hammerhead D820, D821 (quirky - see comment in `lk2nd/device/dts/msm8974/msm8974-lge-hammerhead.dts`)
 - Motorola Moto X 2014 - victara
 - OnePlus One - bacon <!--(use `lk2nd-msm8974-appended-dtb.img`)-->
 - Samsung Galaxy Note 3 - SM-N9005
