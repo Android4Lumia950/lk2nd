@@ -238,6 +238,7 @@ static struct labibb_desc duke_wqhd_dualdsi_cmd_labibb = {
 	3, //pwr_up_delay
 	3, //pwr_down_delay
 	1  //ibb_discharge_en
+        0 //swire_control
 };
 
 #endif /*_PANEL_DUKE_WQHD_DUALDSI_CMD_H_*/
