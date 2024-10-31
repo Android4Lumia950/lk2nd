@@ -1,8 +1,8 @@
 &mdss_dsi0 {
 	//qcom,dsi-pref-prim-pan = <&dsi_default_gpio_0>;
 	// vdd-supply = <&pm8941_lvs3>;
-	qcom,platform-enable-gpio = <&pm8994_gpios 14 0>;
-	qcom,platform-reset-gpio = <&msm_gpio 78 0>;
+	qcom,platform-enable-gpio = <&msmgpio 14 0>;
+	qcom,platform-reset-gpio = <&msmgpio 78 0>;
 	// qcom,platform-lane-config = [];
 
 	qcom,panel-supply-entry0 {
