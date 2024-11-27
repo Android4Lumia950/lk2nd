@@ -128,7 +128,7 @@ when you add a new device, if you are planning to make use of this.
 
 ```
 	panel {
-		compatible = "wingtech,wt88047-panel";
+		compatible = "wingtech,wt88047-panel", "lk2nd,panel";
 
 		qcom,mdss_dsi_r69431_720p_video {
 			compatible = "wingtech,sharp-r69431";
@@ -149,6 +149,16 @@ them in the device node and lk2nd will use them instead of autodetecting.
 ```
 	qcom,msm-id = <QCOM_ID_MSM8916 0>;
 	qcom,board-id = <0xCE08FF01 1>;
+```
+
+### Single-key navigation
+
+On some devices, such as smartwatches, there is only one key available for
+navigation. In this case `lk2nd,single-key-navigation` property can be
+used to switch the navigation scheme to short/long press of a single key.
+
+```
+	lk2nd,single-key-navigation;
 ```
 
 ## Additional drivers

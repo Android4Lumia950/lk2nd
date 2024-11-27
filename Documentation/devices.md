@@ -9,7 +9,7 @@
 - Asus Zenfone 2 Laser (1080p) - Z00T
 - Asus Zenfone 2 Laser ZE500KL - Z00E
 - Asus Zenfone Max ZC550KL (2016) - Z010D
-- BQ Aquaris M5 - piccolo (quirky - see comment in `lk2nd/device/dts/msm8916/msm8939-qrd-skuk.dts`)
+- BQ Aquaris M5 - piccolo
 - BQ Aquaris X5 - paella, picmt
 - DragonBoard 410c - apq8016-sbc
 - GPLUS FL8005A
@@ -35,14 +35,14 @@
 - Samsung Galaxy Ace 4 - SM-G357FZ (quirky - see comment in `lk2nd/device/dts/msm8916/msm8916-samsung.dts`)
 - Samsung Galaxy Core Max - SM-G5108Q (quirky - see comment in `lk2nd/device/dts/msm8916/msm8916-samsung.dts`)
 - Samsung Galaxy Core Prime LTE - SM-G360F, SM-G360G, SM-G360T (rossaltezt is quirky - see comment in `lk2nd/device/dts/msm8916/msm8916-samsung.dts`)
-- Samsung Galaxy E5 - SM-E500F
+- Samsung Galaxy E5 - SM-E500F, SM-E500H
 - Samsung Galaxy E7 - SM-E7000
 - Samsung Galaxy Grand Max - SM-G720AX
 - Samsung Galaxy Grand Prime - SM-G530FZ, SM-G530H, SM-G530R4, SM-G530W, SM-G530Y (G530Y is quirky - see comment in `lk2nd/device/dts/msm8916/msm8916-samsung.dts`)
 - Samsung Galaxy J3 (2016) - SM-J3109, SM-J320YZ
 - Samsung Galaxy J3 Pro - SM-J3110, SM-J3119
 - Samsung Galaxy J5 (2015) - SM-J5007, SM-J5008, SM-J500F, SM-J500FN, SM-J500H, SM-J500M
-- Samsung Galaxy J5 (2016) - SM-J5108, SM-J510F, SM-J510FN, SM-J510H, SM-J510MN, SM-J510UN
+- Samsung Galaxy J5 (2016) - SM-J5108, SM-J510F, SM-J510FN, SM-J510GN, SM-J510H, SM-J510MN, SM-J510UN
 - Samsung Galaxy J7 (2015) - SM-J7008, SM-J700P
 - Samsung Galaxy On7 (2015) - SM-G6000, SM-G600FY, SM-G600S
 - Samsung Galaxy S4 Mini Value Edition - GT-I9195I
@@ -64,16 +64,22 @@
 - Acer Liquid Z330 (T01)
 - CAT B35
 - FarEasTone Smart 506 (quirky - see comment in `lk2nd/device/dts/msm8909/msm8909-1gb-qrd-skuc.dts`)
+- Lenovo Yoga Tab 3 10 LTE
+- Mobvoi TicWatch Pro (WF12096)
 - Nokia 6300 4G
 - Nokia 8000 4G
 - Nokia 8110 4G
+- ZTE N818S (sapphire)
 
 ### lk2nd-msm8952
 
 - BQ X5 Plus (Longcheer L9360)
+- HMD Global Nokia 5 (nd1)
 - HMD Global Nokia 6 (ple)
 - Huawei Honor 7C (aum-l41) (quirky - see comment in `lk2nd/device/dts/msm8952/msm8937-huawei-aum.dts`)
+- Huawei MediaPad T3 10 (ags- l09/l03/w09) (quirky - see comment in `lk2nd/device/dts/msm8952/msm8917-huawei-agassi.dts`)
 - Leeco s2
+- Lenovo K5 Play (l38011)
 - Motorola Moto G5 (cedric)
 - Motorola Moto G5S (montana)
 - Motorola Moto G6 Play (jeter)
@@ -98,6 +104,7 @@
 - Lenovo ThinkSmart View (cd-18781y) (quirky - see comments in `lk2nd/device/dts/msm8953/apq8053-lenovo-cd-18781y.dts`)
 - Meizu M6 Note (m1721)
 - Motorola Moto G5 Plus (potter)
+- Motorola Moto G5s Plus (sanders)
 - Motorola Moto G6 (ali)
 - Motorola Moto G7 Power (ocean)
 - Motorola One (deen)
@@ -119,7 +126,7 @@
 - Fairphone 2 - FP2
 - HTC One M8 - m8
 - LG G3 - D855
-- LG Google Nexus 5 - hammerhead D820, D821
+- LG Google Nexus 5 - hammerhead D820, D821 (quirky - see comment in `lk2nd/device/dts/msm8974/msm8974-lge-hammerhead.dts`)
 - Motorola Moto X 2014 - victara
 - OnePlus One - bacon <!--(use `lk2nd-msm8974-appended-dtb.img`)-->
 - Samsung Galaxy Note 3 - SM-N9005
@@ -149,6 +156,7 @@
 
 ### lk2nd-msm8996
 
+- LG V20 - h990
 - OnePlus 3T
 
 ### lk2nd-msm8960
