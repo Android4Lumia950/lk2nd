@@ -99,7 +99,8 @@
 
 - Asus Zenfone 3 ZE520KL/ZE552KL (zenfone3)
 - Fairphone 3
-- Huawei Maimang 5 / Nova (Plus) / G9 (Plus)
+- Huawei Maimang 5 / Nova Plus / G9 (Plus) (milan)
+- Huawei Nova (cannes)
 - Lenovo P2 (kuntao)
 - Lenovo ThinkSmart View (cd-18781y) (quirky - see comments in `lk2nd/device/dts/msm8953/apq8053-lenovo-cd-18781y.dts`)
 - Meizu M6 Note (m1721)
@@ -148,7 +149,7 @@
 - Motorola Moto G 2014 LTE - thea
 - Samsung Galaxy Grand 2 - SM-G7102
 - Samsung Galaxy Tab 4 10.1 (2014) - SM-T530, SM-T535
-- Samsung Galaxy Tab 4 8.0 (2014) - SM-T330, SM-T330NU
+- Samsung Galaxy Tab 4 8.0 (2014) - SM-T330, SM-T330NU, SM-T331
 
 ### lk2nd-msm8994
 
@@ -158,6 +159,7 @@
 
 - LG V20 - h990
 - OnePlus 3T
+- Xiaomi Mi5 - Gemini
 
 ### lk2nd-msm8960
 

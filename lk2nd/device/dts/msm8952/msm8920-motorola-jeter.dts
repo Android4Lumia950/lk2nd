@@ -4,10 +4,9 @@
 #include <lk2nd.dtsi>
 
 / {
-	qcom,msm-id = <QCOM_ID_MSM8937 0x00>;
-	qcom,board-id = <0x4A 0x8100>,
-			<0x4A 0x8000>,
-			<0x4B 0x8000>;
+	qcom,msm-id = <QCOM_ID_MSM8920 0x00>;
+	qcom,board-id = <0x43 0x8000>,
+			<0x43 0x83a0>;
 
 	/* 
 	 * model is required by bootloader to pick dtb.
@@ -18,9 +17,9 @@
 };
 
 &lk2nd {
-	model = "Motorola Moto G6 Play (jeter) (MSM8937)";
+	model = "Motorola Moto G6 Play (jeter) (MSM8920)";
 	compatible = "motorola,jeter";
 	lk2nd,match-device = "jeter";
 
-	lk2nd,dtb-files = "msm8937-motorola-jeter";
+	lk2nd,dtb-files = "msm8920-motorola-jeter";
 };
