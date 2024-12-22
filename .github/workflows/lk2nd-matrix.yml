@@ -29,6 +29,7 @@ jobs:
           - msm8953
           - msm8960
           - msm8974
+          - msm8992
           - msm8994
           - msm8996
         exclude:
