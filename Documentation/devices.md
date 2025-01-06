@@ -85,6 +85,7 @@
 - Motorola Moto G6 Play (jeter)
 - OPPO A57 (A57) (quirky - see comment in `lk2nd/device/dts/msm8952/msm8940-oppo-a57.dts`)
 - Redmi 3S (land) (quirky - see comment in `lk2nd/device/dts/msm8952/msm8937-xiaomi-land.dts`)
+- Redmi 4 (prada)
 - Redmi 4A (rolex)
 - Redmi 4X (santoni)
 - Redmi 5A (riva)
@@ -94,6 +95,7 @@
 - Sony Xperia X
 - Sony Xperia X Compact
 - Wileyfox Swift 2
+- Xiaomi Mi Max (hydrogen)
 
 ### lk2nd-msm8953
 
@@ -115,6 +117,7 @@
 - Samsung Tab A2 XL WIFI
 - Xiaomi Mi A1 (tissot)
 - Xiaomi Mi A2 Lite (daisy)
+- Xiaomi Mi Max 2 (oxygen)
 - Xiaomi Redmi 4 Prime (markw)
 - Xiaomi Redmi 5 (rosy)
 - Xiaomi Redmi 5 Plus (vince)
