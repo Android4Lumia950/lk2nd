@@ -17,6 +17,7 @@
 - Huawei Ascend G7 - G7-L01
 - Huawei G7 Plus / G8 / GX8 - rio
 - Huawei Honor 5X / GR5 (2016) - kiwi
+- Huawei MediaPad T2 10.0 Pro - federer
 - Huawei Y635 - Y635-L01 (quirky - see comment in `lk2nd/device/dts/msm8916/msm8916-huawei-y635-l01.dts`)
 - Lenovo A6000
 - Lenovo A6010
@@ -64,6 +65,7 @@
 - Acer Liquid Z330 (T01)
 - CAT B35
 - FarEasTone Smart 506 (quirky - see comment in `lk2nd/device/dts/msm8909/msm8909-1gb-qrd-skuc.dts`)
+- Haier G151 / Andromax A (quirky - see comment in `lk2nd/device/dts/msm8909/msm8909-1gb-qrd-skuc.dts`)
 - Lenovo Yoga Tab 3 10 LTE
 - Mobvoi TicWatch Pro (WF12096)
 - Nokia 6300 4G
@@ -81,6 +83,7 @@
 - Leeco s2
 - Lenovo K5 Play (l38011)
 - Motorola Moto E5 (nora)
+- Motorola Moto E5 Plus (hannah) (MSM8917)
 - Motorola Moto E5 Plus (hannah) (MSM8937)
 - Motorola Moto G5 (cedric)
 - Motorola Moto G5S (montana)
@@ -164,12 +167,14 @@
 
 ### lk2nd-msm8996
 
+- LG G5 - h850
 - LG V20 - h990
 - OnePlus 3T
 - Xiaomi Mi5 - Gemini
 
 ### lk2nd-msm8960
 
+- Samsung Galaxy Express (SGH-I437)
 - Samsung Galaxy S4 Mini (GT-I9195)
 
 ## Porting new devices
