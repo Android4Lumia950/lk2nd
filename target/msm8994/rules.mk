@@ -17,9 +17,9 @@ SCRATCH_ADDR := 0x10100000
 
 SCRATCH_SIZE := 0x20000000
 
-DEFINES += DISPLAY_SPLASH_SCREEN=1
-DEFINES += DISPLAY_TYPE_MIPI=1
-DEFINES += DISPLAY_TYPE_DSI6G=1
+DEFINES += DISPLAY_SPLASH_SCREEN=0
+DEFINES += DISPLAY_TYPE_MIPI=0
+DEFINES += DISPLAY_TYPE_DSI6G=0
 
 DEFINES += DISPLAY_EN_20NM_PLL_90_PHASE
 
@@ -29,7 +29,6 @@ MODULES += \
 	dev/qpnp_wled \
 	dev/qpnp_led \
     lib/ptable \
-	dev/gcdb/display \
 	dev/pmic/pmi8994 \
     lib/libfdt
 
@@ -47,8 +46,6 @@ DEFINES += \
 OBJS += \
     $(LOCAL_DIR)/init.o \
     $(LOCAL_DIR)/meminfo.o \
-    $(LOCAL_DIR)/target_display.o \
-    $(LOCAL_DIR)/oem_panel.o
 
 ifeq ($(ENABLE_SMD_SUPPORT),1)
 OBJS += \

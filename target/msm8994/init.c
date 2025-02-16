@@ -64,7 +64,7 @@
 #include <secapp_loader.h>
 #include <rpmb.h>
 
-#include "target/display.h"
+//#include "target/display.h"
 
 #define CE_INSTANCE             2
 #define CE_EE                   1
@@ -103,13 +103,13 @@ extern int platform_is_msm8994(void);
 void target_early_init(void)
 {
 
-	//Relocate UEFI FB to the one used in LA platforms
-	memset((void *)0x03400000, 0, 0x00E10000);
-	writel(0x03400000, 0xFD915014);
-	writel(0x03400000, 0xFD917014);
-	//Flush 
-	writel(0x220D828,0xFD902018);
-	writel(0x64090,0xFD902218);
+	/////Relocate UEFI FB to the one used in LA platforms
+	///memset((void *)0x03400000, 0, 0x00E10000);
+	///writel(0x03400000, 0xFD915014);
+	///writel(0x03400000, 0xFD917014);
+	/////Flush 
+	///writel(0x220D828,0xFD902018);
+	///writel(0x64090,0xFD902218);
 #if WITH_DEBUG_UART
 	uart_dm_init(2, 0, BLSP1_UART1_BASE);
 #endif

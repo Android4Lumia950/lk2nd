@@ -60,7 +60,7 @@ OBJS += \
 endif
 
 ifeq ($(ENABLE_DISPLAY),0)
-DEFINES := $(filter-out DISPLAY_SPLASH_SCREEN=1, $(DEFINES))
+DEFINES := $(filter-out DISPLAY_SPLASH_SCREEN=0, $(DEFINES))
 endif
 
 ifeq ($(ENABLE_FBCON_DISPLAY_MSG),1)
@@ -467,7 +467,6 @@ ifeq ($(PLATFORM),fsm9010)
 endif
 
 ifeq ($(PLATFORM),msm8994)
-DEFINES += DISPLAY_TYPE_MDSS=1
 	OBJS += $(LOCAL_DIR)/qgic.o \
 			$(LOCAL_DIR)/qtimer.o \
 			$(LOCAL_DIR)/qtimer_mmap.o \
@@ -490,14 +489,6 @@ DEFINES += DISPLAY_TYPE_MDSS=1
 			$(LOCAL_DIR)/crypto5_wrapper.o \
 			$(LOCAL_DIR)/qusb2_phy.o \
 			$(LOCAL_DIR)/qseecom_lk.o \
-			$(LOCAL_DIR)/mdp5.o \
-			$(LOCAL_DIR)/display.o \
-			$(LOCAL_DIR)/mipi_dsi.o \
-			$(LOCAL_DIR)/mipi_dsi_phy.o \
-			$(LOCAL_DIR)/mipi_dsi_autopll.o \
-			$(LOCAL_DIR)/mipi_dsi_autopll_20nm.o \
-			$(LOCAL_DIR)/mdss_hdmi.o \
-			$(LOCAL_DIR)/hdmi_pll_20nm.o \
 			$(LOCAL_DIR)/dload_util.o
 endif
 

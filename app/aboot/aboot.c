@@ -671,16 +671,6 @@ unsigned char *update_cmdline(const char * cmdline)
 			break;
 	}
 
-#if DISPLAY_SPLASH_SCREEN
-	if (cmdline) {
-		if ((strstr(cmdline, DISPLAY_DEFAULT_PREFIX) == NULL) &&
-			target_display_panel_node(display_panel_buf,
-			MAX_PANEL_BUF_SIZE) &&
-			strlen(display_panel_buf)) {
-			cmdline_len += strlen(display_panel_buf);
-		}
-	}
-#endif
 
 	if (target_warm_boot()) {
 		warm_boot = true;
@@ -1280,10 +1270,6 @@ tags_done:
 	}
 #endif
 
-	/* Turn off splash screen if enabled */
-#if DISPLAY_SPLASH_SCREEN
-	target_display_shutdown();
-#endif
 
 	/* Perform target specific cleanup */
 	target_uninit();
