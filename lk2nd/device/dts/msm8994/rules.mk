@@ -5,4 +5,5 @@ LOCAL_DIR := $(GET_LOCAL_DIR)
 ADTBS += \
 	$(LOCAL_DIR)/msm8992-lg-h815.dtb \
 	$(LOCAL_DIR)/msm8992-msft-talkman.dtb \
-	$(LOCAL_DIR)/msm8994-msft-cityman.dtb
+	$(LOCAL_DIR)/msm8994-msft-cityman.dtb \
+    $(LOCAL_DIR)/msm8994-huawei-angler.dtb \
