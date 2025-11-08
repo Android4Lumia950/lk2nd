@@ -4828,6 +4828,13 @@ void cmd_reboot_bootloader(const char *arg, void *data, unsigned sz)
 	reboot_device(FASTBOOT_MODE);
 }
 
+//are we deaduzz?! :skull:
+void cmd_oem_reboot_recovery(const char *arg, void *data, unsigned sz)
+{
+	fastboot_okay("");
+	reboot_device(RECOVERY_MODE);
+}
+
 #if !ABOOT_STANDALONE
 void cmd_oem_enable_charger_screen(const char *arg, void *data, unsigned size)
 {
@@ -5346,6 +5353,7 @@ void aboot_fastboot_register_commands(void)
 						{"continue", cmd_continue},
 						{"reboot", cmd_reboot},
 						{"reboot-bootloader", cmd_reboot_bootloader},
+                        {"oem reboot-recovery", cmd_oem_reboot_recovery},
 #if !ABOOT_STANDALONE
 						{"oem unlock", cmd_oem_unlock},
 						{"oem unlock-go", cmd_oem_unlock_go},
