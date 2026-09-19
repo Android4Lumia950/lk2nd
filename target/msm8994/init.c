@@ -102,6 +102,13 @@ extern int platform_is_msm8994(void);
 
 void target_early_init(void)
 {
+	    //Relocate UEFI FB to the one used in LA platforms
+	memset((void *)0x03400000, 0, 0x00E10000);
+	writel(0x03400000, 0xFD915014);
+	writel(0x03400000, 0xFD917014);
+	//Flush 
+	writel(0x220D828,0xFD902018);
+	writel(0x64090,0xFD902218);
 #if WITH_DEBUG_UART
 	uart_dm_init(2, 0, BLSP1_UART1_BASE);
 #endif
@@ -544,7 +551,7 @@ void reboot_device(unsigned reboot_reason)
 	writel(reboot_reason, restart_reason_addr);
 
 	if(reboot_reason == FASTBOOT_MODE  || reboot_reason == NORMAL_DLOAD ||
-	   reboot_reason == EMERGENCY_DLOAD)
+	   reboot_reason == EMERGENCY_DLOAD || reboot_reason == RECOVERY_MODE)
 		reset_type = PON_PSHOLD_WARM_RESET;
 	else
 		reset_type = PON_PSHOLD_HARD_RESET;
